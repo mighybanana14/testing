@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Surprise 💖</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <audio autoplay>
+        <source src="background sound/Happy Wheels victory.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="surprise-container">
+        <h1>Si gendut yang kau sayang 💕</h1>
+        <img src="img/3.jpeg" alt="Our Special Moment" class="popup-image">
+    </div>
+
+    <script>
+        function startConfetti() {
+            let duration = 5 * 1000; 
+            let end = Date.now() + duration;
+
+            function frame() {
+                if (Date.now() < end) {
+                    confetti({
+                        particleCount: 7,
+                        spread: 90,
+                        startVelocity: 30,
+                        origin: { y: 0.6 }
+                    });
+                    requestAnimationFrame(frame);
+                }
+            }
+            frame();
+        }
+
+        
+        window.addEventListener("load", startConfetti);
+    </script>
+</body>
+</html>
