@@ -1,0 +1,1 @@
+tiada saja ja ni 
