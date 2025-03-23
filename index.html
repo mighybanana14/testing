@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Floating Hearts Container -->
     <div class="hearts-container"></div>
 
     <div class="container">
@@ -16,24 +15,19 @@
         <img src="img/QR_code.png" alt="Scan kau ni QR">
     </div>
 
-    <!-- Background Music (Auto-play) -->
     <audio id="bg-music" autoplay loop>
         <source src="background sound\So High - Doja Cat [instrumental].mp3" type="audio/mpeg">
     </audio>
 
-    <!-- QR Code Redirect Script -->
     <script>
         function checkQRCodeScan() {
-            // Simulate QR scan detection (replace with actual QR scan logic)
             setTimeout(() => {
-                window.location.href = "main.html"; // Redirect after scan
-            }, 5000); // Redirect in 5 seconds
+                window.location.href = "main.html";
+            }, 15000);
         }
 
-        // Start checking for QR scan
         document.addEventListener("DOMContentLoaded", checkQRCodeScan);
 
-        // Floating Hearts Effect
         function createHeart() {
             const heart = document.createElement("div");
             heart.classList.add("heart");
